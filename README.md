@@ -13,3 +13,6 @@ ModelRunBaselineSimulationCode_part3.R calls the following scripts in this order
 (4)	ModelIterationsCode_part2.R (iterates the model forward in time)
 
 The script "CreateSeasonalVariants.R" modifies the baseline seasons according to the argument specified and the type of season required for the seasonality analyses. 
+
+The DOI for this repository is:
+DOI: 10.5281/zenodo.2685071

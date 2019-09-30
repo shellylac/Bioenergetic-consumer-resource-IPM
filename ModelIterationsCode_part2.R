@@ -12,7 +12,7 @@ for (iteration in 2:monthstorun){ #monthstobreed is given in the analysis script
   lastMonthPopVector<-TrackHerbPopSize[,iteration-1]
   lastVegGrowthRate<-stoch_veg_growth_rate[iteration-1]
   lastMonthVegHerbs<-TrackVeg_withHerbs[iteration-1]
-
+  
   #Work out the max consumption for whole consumer population - given distribution of phenotypes and available veg
   Eat_per_Zs<-cmax.z(zr_values, zs_values, params["cmax_slope"], params["half_sat_val"],  params["steepness"], params["fat_threshold"], lastMonthVegHerbs)
   maxHerbsCanEat<-sum(Eat_per_Zs*lastMonthPopVector)
@@ -30,7 +30,7 @@ for (iteration in 2:monthstorun){ #monthstobreed is given in the analysis script
   vegScalingFactor<-ifelse(snow_indicator[iteration]==0, p, params["snow_effect"]*p)
   
   #-------------------------------------------------------------------------
-    #Calculate available resources 
+  #Calculate available resources 
   currentAvailVegHerbs<-Veg.fun(lastVegGrowthRate, params["Veg_max"], lastMonthVegHerbs, vegScalingFactor, maxHerbsCanEat)
   TrackVeg_withHerbs[iteration]<-currentAvailVegHerbs
   

@@ -17,10 +17,10 @@ source("ModelSetUpCode_part1.R")
 source("BaselineSeasonsCode.R") # create new set of veg growth rates and snow months
 stoch_veg_growth_rate<-baseline_veg_growth_rate         
 snow_indicator<-baseline_snow_indicator                
-      #saveRDS(baseline_snow_indicator, "BL_snowindicator.rds")   # save for use in sensitivity analysis
-      #saveRDS(baseline_veg_growth_rate, "BL_veggrowthrate.rds")  # save for use in sensitivity analysis
-      #stoch_veg_growth_rate<-readRDS(BL_veggrowthrate)  # use stored growth rate
-      #snow_indicator<-readRDS(BL_snowindicator)         # use stored growth rate
+#saveRDS(baseline_snow_indicator, "BL_snowindicator.rds")   # save for use in sensitivity analysis
+#saveRDS(baseline_veg_growth_rate, "BL_veggrowthrate.rds")  # save for use in sensitivity analysis
+#stoch_veg_growth_rate<-readRDS(BL_veggrowthrate)  # use stored growth rate
+#snow_indicator<-readRDS(BL_snowindicator)         # use stored growth rate
 
 #==================================================
 #Create Arrays to hold desired output

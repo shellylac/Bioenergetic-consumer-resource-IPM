@@ -43,7 +43,7 @@ zs_50 <- seq(0.1,240,length.out=50) # needed with G & D matrices
 zr_50 <- seq(0.1,120,length.out=50) # needed with G & D matrices
 zs_values <- rep(zs_50,each=50)     # needed with S & R matrices
 zr_values <- rep(zr_50,times=50)    # needed with S & R matrices
-#Add these up to get our Z phenotypes 
+#Add these to get our Z phenotypes 
 Z_phenotypes<-zs_values+zr_values # Total size phenotypes (Z)
 #--------------------------------------------------------------------
 
@@ -163,8 +163,8 @@ D.fun<-function(zr.50, zs.50, cmax.slope,  half.sat.val, steepness,fat.threshold
         mu.zs <- ReproZ.to.OffspringZS*convert.coef.2*ZR.to.ReproZ*Zr.o 
         #Calculate mean offspring reserve mass
         mu.zr <- (1-ReproZ.to.OffspringZS)*convert.coef.3*ZR.to.ReproZ*Zr.o 
-        sigma.zs <- sqrt(5 - exp(-0.05*zs.50[i])) # variance in growth of offspring (ZS)
-        sigma.zr <- sqrt(5 - exp(-0.05*zr.50[j])) # variance in reserve size of offspring (ZR)
+        sigma.zs <- sqrt(1.5 - exp(-0.03*zs.50[i])) # variance in growth of offspring (ZS)
+        sigma.zr <- sqrt(1.5 - exp(-0.03*zr.50[j])) # variance in reserve size of offspring (ZR)
         temp.zs <- dnorm(zs.50,mu.zs,sigma.zs)
         temp.zr <- dnorm(zr.50,mu.zr,sigma.zr)   
         temp.zs <- temp.zs/sum(temp.zs)
